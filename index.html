@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Crumbs 🍪</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Quicksand', sans-serif;
+  background:#fff6f9;
+  color:#6d4c57;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgb(249, 163, 251);
+  position:sticky;
+  top:0;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+nav h2{
+  font-family:'Pacifico', cursive;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#6d4c57;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(to right,#ffe5ec,#fff0f5);
+}
+
+.hero h1{
+  font-size:50px;
+  font-family:'Pacifico', cursive;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:18px;
+}
+
+.hero button{
+  margin-top:25px;
+  padding:12px 30px;
+  border:none;
+  background:#ff8fab;
+  color:white;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:#ff5c8a;
+}
+
+/* PRODUCTS */
+.cookies{
+  padding:80px 40px;
+  text-align:center;
+}
+
+.cookies h2{
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:15px;
+  transition:0.3s;
+}
+
+.card img:hover{
+  transform:scale(1.05);
+}
+
+/* TESTIMONIAL */
+.testimonial{
+  padding:80px 20px;
+  background:#ffe5ec;
+  text-align:center;
+}
+
+.testimonial p{
+  max-width:600px;
+  margin:20px auto;
+  font-style:italic;
+}
+
+/* CONTACT */
+.contact{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.contact input,
+.contact textarea{
+  width:100%;
+  max-width:400px;
+  padding:12px;
+  margin:10px;
+  border-radius:15px;
+  border:1px solid #ffc2d1;
+}
+
+.contact button{
+  padding:10px 25px;
+  border:none;
+  background:#ff8fab;
+  color:white;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:white;
+  padding:30px;
+  text-align:center;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Sweet Crumbs 🍓</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Fresh Baked Happiness 🍪💗</h1>
+  <p>Soft, sweet & baked with love — delivered to your door ✨</p>
+  <button>Order Now 🛒</button>
+</section>
+
+<section class="cookies">
+  <h2>Our Best Sellers 🌸</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="./pexels-roman-odintsov-5846040.jpg" alt="Chocolate Cookie">
+      <h3>Chocolate Chip 🍫</h3>
+      <p>Classic gooey goodness</p>
+    </div>
+
+    <div class="card">
+      <img src="./pexels-alleksana-6431576.jpg" alt="Strawberry Cookie">
+      <h3>Strawberry Dream 🍓</h3>
+      <p>Sweet & pink delight</p>
+    </div>
+
+    <div class="card">
+      <img src="./pexels-leticiacurveloph-35227476.jpg" alt="vanilla cookie">
+      <h3>Vanilla Sprinkle🧁 </h3>
+      <p>Light creamy magic</p>
+    </div>
+
+    <div class="card">
+      <img src="./pexels-polina-tankilevitch-5848200.jpg" alt="Caramel Cookie">
+      <h3>Caramel Crunch 🍯</h3>
+      <p>Rich caramel love</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonial">
+  <h2>What Our Cuties Say !!! 💕</h2>
+  <p>"The softest and gooey cookies ever <br> Feels like a warm hug
+     in every bite <br> yummm" <br>
+      🤍🥹🤤 </p>
+</section>
+
+<section class="contact">
+  <h2>Contact Us 💌</h2>
+  <input type="text" placeholder="Your Name">
+  <br>
+  <input type="email" placeholder="Your Email">
+  <br>
+  <textarea rows="4" placeholder="Your Message"></textarea>
+  <br>
+  <button>Send Message 💗</button>
+</section>
+
+<footer>
+  © 2026 Sweet Crumbs | Made with love 🤍
+</footer>
+
+</body>
+</html>
