@@ -6,12 +6,14 @@
 <title>Sweet Crumbs 🍪</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
@@ -132,7 +134,10 @@ nav a{
 .testimonial p{
   max-width:600px;
   margin:20px auto;
-  font-style:italic;
+  font-family: 'Dancing Script', cursive;
+  font-size:22px;
+  line-height:1.6;
+  color:#8e5c6d;
 }
 
 /* CONTACT */
@@ -167,18 +172,6 @@ footer{
   text-align:center;
   margin-top:40px;
 }
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  nav{
-    flex-direction:column;
-    gap:15px;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-}
 </style>
 </head>
 
@@ -187,43 +180,43 @@ footer{
 <nav>
   <h2>Sweet Crumbs 🍓</h2>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Shop</a></li>
-    <li><a href="#">Reviews</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
   <h1>Fresh Baked Happiness 🍪💗</h1>
   <p>Soft, sweet & baked with love — delivered to your door ✨</p>
-  <button>Order Now 🛒</button>
+  <button id="orderBtn">Order Now 🛒</button>
 </section>
 
-<section class="cookies">
+<section class="cookies" id="shop">
   <h2>Our Best Sellers 🌸</h2>
   <div class="grid">
 
     <div class="card">
-      <img src="./pexels-roman-odintsov-5846040.jpg" alt="Chocolate Cookie">
+      <img src="./pexels-roman-odintsov-5846040.jpg">
       <h3>Chocolate Chip 🍫</h3>
       <p>Classic gooey goodness</p>
     </div>
 
     <div class="card">
-      <img src="./pexels-alleksana-6431576.jpg" alt="Strawberry Cookie">
+      <img src="./pexels-alleksana-6431576.jpg">
       <h3>Strawberry Dream 🍓</h3>
       <p>Sweet & pink delight</p>
     </div>
 
     <div class="card">
-      <img src="./pexels-leticiacurveloph-35227476.jpg" alt="vanilla cookie">
-      <h3>Vanilla Sprinkle🧁 </h3>
+      <img src="./pexels-leticiacurveloph-35227476.jpg">
+      <h3>Vanilla Sprinkle 🧁</h3>
       <p>Light creamy magic</p>
     </div>
 
     <div class="card">
-      <img src="./pexels-polina-tankilevitch-5848200.jpg" alt="Caramel Cookie">
+      <img src="./pexels-polina-tankilevitch-5848200.jpg">
       <h3>Caramel Crunch 🍯</h3>
       <p>Rich caramel love</p>
     </div>
@@ -231,127 +224,64 @@ footer{
   </div>
 </section>
 
-<section class="testimonial">
+<section class="testimonial" id="reviews">
   <h2>What Our Cuties Say !!! 💕</h2>
-  <p>"The softest and gooey cookies ever <br> Feels like a warm hug
-     in every bite <br> yummm" <br>
-      🤍🥹🤤 </p>
+  <p>"The softest and gooey cookies ever <br>
+     Feels like a warm hug in every bite <br>
+     yummm 🤍🥹🤤"</p>
 </section>
 
-<!-- ✅ CONTACT FORM WITH POPUP -->
-<section class="contact">
+<section class="contact" id="contact">
   <h2>Contact Us 💌</h2>
 
   <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <br>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <br>
-    <textarea id="messageBox" rows="4" placeholder="Your Message" required></textarea>
-    <br>
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <textarea id="message" rows="4" placeholder="Your Message" required></textarea><br>
     <button type="submit">Send Message 💗</button>
   </form>
 
-  <p id="successMsg" style="margin-top:15px; font-weight:bold;"></p>
 </section>
-
-<!-- POPUP CONTACT -->
-<div id="popup" style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-justify-content:center;
-align-items:center;
-z-index:1000;
-">
-
-  <div style="
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  width:300px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  ">
-
-    <h3>🎉 Message Sent!</h3>
-    <p id="popupText"></p>
-    <button onclick="closePopup()" 
-    style="margin-top:15px; padding:8px 20px; border:none; background:#ff8fab; color:white; border-radius:20px; cursor:pointer;">
-      Close 💗
-    </button>
-
-  </div>
-</div>
-
-<!-- POPUP ORDER BUTTON -->
-<div id="orderPopup" style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-justify-content:center;
-align-items:center;
-z-index:1000;
-">
-
-  <div style="
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  width:300px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  ">
-
-    <h3>🎉 Order Received!</h3>
-    <p id="orderPopupText">Thank you! Your cookies order is being prepared 🍪💗</p>
-    <button onclick="closeOrderPopup()" 
-    style="margin-top:15px; padding:8px 20px; border:none; background:#ff8fab; color:white; border-radius:20px; cursor:pointer;">
-      Close 💗
-    </button>
-
-  </div>
-</div>
 
 <footer>
   © 2026 Sweet Crumbs | Made with love 🤍
 </footer>
 
+<!-- POPUP -->
+<div id="popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;z-index:1000;">
+  <div style="background:white;padding:30px;border-radius:20px;text-align:center;width:300px;">
+    <h3 id="popupTitle"></h3>
+    <p id="popupText"></p>
+    <button onclick="closePopup()" style="margin-top:15px;padding:8px 20px;border:none;background:#ff8fab;color:white;border-radius:20px;cursor:pointer;">Close 💗</button>
+  </div>
+</div>
+
 <script>
-// CONTACT FORM POPUP
+
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
-
   let name = document.getElementById("name").value;
 
+  document.getElementById("popupTitle").innerText = "🎉 Message Sent!";
   document.getElementById("popupText").innerText =
-    "Thank you " + name + " 💕 We will contact you soon!";
+  "Thank you " + name + " 💕 We will contact you soon!";
 
   document.getElementById("popup").style.display = "flex";
+  this.reset();
+});
 
-  document.getElementById("contactForm").reset();
+document.getElementById("orderBtn").addEventListener("click", function(){
+  document.getElementById("popupTitle").innerText = "🍪 Order Received!";
+  document.getElementById("popupText").innerText =
+  "Your cookies are being prepared with love 💗";
+
+  document.getElementById("popup").style.display = "flex";
 });
 
 function closePopup(){
   document.getElementById("popup").style.display = "none";
 }
 
-// HERO ORDER BUTTON POPUP
-document.querySelector(".hero button").addEventListener("click", function(){
-  document.getElementById("orderPopup").style.display = "flex";
-});
-
-function closeOrderPopup(){
-  document.getElementById("orderPopup").style.display = "none";
-}
 </script>
 
 </body>
